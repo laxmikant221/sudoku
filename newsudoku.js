@@ -11,21 +11,6 @@ var index = 0;
 var input = [];
 var status = 0;
 
-function getvalue(){ 
-  $('table td').click(function(){
-    $('table td').each(function(){
-      if (!$(this).hasClass('vshow')) {
-        var extract = Number($(this).attr('data-value'));
-        if (extract == 0 || isNaN(extract)) {
-          extract = '';
-        }
-        $(this).append('<input type="text" maxlength="1" data-value="' + extract + '"/>'); 
-      }
-    });
-    $('table td').off('click');                        
-  })
-}
-
 function checksudoku(){
   $("table tr").each(function() {
     var inputData = $(this).find('td').not('.vshow');
@@ -44,6 +29,7 @@ function checksudoku(){
     }
   });
   if(status == 1){
+    status = 0;
      compare(input, sol);
   }
   else{
@@ -68,12 +54,15 @@ function compare(input, sol){
   }
   console.log(flag);
   if(flag == true){
+    console.log(input);
     input.length = 0;
     idex = 0;
+    status = 0;
+    
     $("#press").click();
     $("#wmessage").text("Congratulations!!! You Won");
-    status = 0;
-    alert("you win");
+    $("#lmessage").text("");
+    
   }
   else{
     input.length = 0;
@@ -81,7 +70,9 @@ function compare(input, sol){
     status = 0;
     console.log(input);
     $("#press").click();
+    $("#wmessage").text("");
     $("#lmessage").text("You lost!!! Better Luck Next-Time");
+
     // alert("you loose");
   }
 }

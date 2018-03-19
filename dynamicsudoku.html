@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>Static Sudoku Problem</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="dynamicsudoku.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h1 class="text-center">Sudoku</h1>
+  <div class="container sudoku table-responsive center">
+    <table class="table table-bordred" >
+      <tbody>
+        <tr>
+            <td></td>
+            <td class="vshow" data-value=""></td>
+            <td class="box"></td>
+            <td class="vshow" data-value=""></td>
+            <td></td>
+            <td class="vshow box" data-value=""></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td class="vshow" data-value=""></td>
+          <td class="vshow" data-value=""></td>
+          <td class="box"></td>
+          <td></td>
+          <td></td>
+          <td class="vshow box" data-value=""></td>
+          <td class="vshow" data-value=""></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="third">
+          <td></td>
+          <td></td>
+          <td class="box"></td>
+          <td></td>
+          <td class="vshow" data-value=""></td>
+          <td class="box"></td>
+          <td></td>
+          <td class="vshow"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="vshow" data-value=""></td>
+          <td class="vshow" data-value=""></td>
+          <td class="box"></td>
+          <td></td>
+          <td></td>
+          <td class="box"></td>
+          <td class="vshow" data-value=""></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="vshow" data-value=""></td>
+          <td></td>
+          <td class="box"></td>
+          <td></td>
+          <td class="vshow"></td>
+          <td class="box"></td>
+          <td></td>
+          <td></td>
+          <td class="vshow" data-value=""></td>
+        </tr>
+        <tr class="third">
+          <td></td>
+          <td></td>
+          <td class="vshow box" data-value=""></td>
+          <td></td>
+          <td></td>
+          <td class="vshow box"></td>
+          <td></td>
+          <td class="vshow" data-value=""></td>
+          <td class="vshow" data-value=""></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="vshow"></td>
+          <td class="box"></td>
+          <td></td>
+          <td class="vshow" data-value=""></td>
+          <td class="box"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class="vshow box" data-value=""></td>
+          <td class="vshow" data-value=""></td>
+          <td></td>
+          <td class="box"></td>
+          <td></td>
+          <td class="vshow" data-value=""></td>
+          <td class="vshow" data-value=""></td>
+        </tr>
+        <tr class="third">
+          <td></td>
+          <td class="vshow"></td>
+          <td class="box"></td>
+          <td class="vshow" data-value=""></td>
+          <td></td>
+          <td class="vshow box" data-value=""></td>
+          <td></td>
+          <td class="vshow" data-value=""></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table><br>
+    <button type="button" class="btn btn-success" id="check">Check </button>
+    <button type="button" class="btn btn-success" id="Submit">Submit</button>
+    <button type="button" id="press" data-toggle="modal" data-target="#Modal"></button>
+  </div>
+  <div id="Modal" class="modal fade" role="dialog">
+    <div class="modal-dialog" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"> X</button>
+            </div>
+            <div class="modal-body">
+              <h3 id="wmessage"></h3>
+              <h3 id="lmessage"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+  <script  src="dynamicsudoku.js"></script>
+</body>
+</html>
