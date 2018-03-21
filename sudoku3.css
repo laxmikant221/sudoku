@@ -32,10 +32,16 @@ input {
   background: transparent;
   font-size: 20px;
   text-align: center;
-  width: 20px;
+  width: 100%;
 }
-input:hover{
+/*input:hover{
   background-color: yellow;
+}*/
+input:hover {
+  background-color: lightgreen;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
 }
 .btn {
   margin-bottom: 30px;
